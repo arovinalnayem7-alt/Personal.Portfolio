@@ -82,7 +82,7 @@
             height: 25px;
             right: -12px;
             background-color: white;
-            border: 4px solid #4f46e5;
+            border: 4px solid #4338ca; /* indigo-700 */
             top: 15px;
             border-radius: 50%;
             z-index: 1;
@@ -212,127 +212,44 @@
 
         /* Enhanced Mobile Responsiveness */
         @media screen and (max-width: 768px) {
-            .timeline {
-                padding: 0 10px;
-            }
-            .timeline::after {
-                left: 31px;
-            }
-            .timeline-container {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 15px;
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
-            .timeline-container.right {
-                left: 0%;
-            }
-            .timeline-container.left::after, .timeline-container.right::after {
-                left: 18px;
-            }
-            .timeline-content {
-                padding: 15px 20px;
-            }
-            .accordion-header {
-                padding: 1rem;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-            .accordion-header .accordion-icon {
-                align-self: flex-end;
-                margin-top: -1.5rem;
-            }
-            .work-toggle {
-                padding: 1rem;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.75rem;
-            }
-            .details-button {
-                align-self: flex-end;
-            }
+            .timeline { padding: 0 10px; }
+            .timeline::after { left: 31px; }
+            .timeline-container { width: 100%; padding-left: 70px; padding-right: 15px; padding-top: 15px; padding-bottom: 15px; }
+            .timeline-container.right { left: 0%; }
+            .timeline-container.left::after, .timeline-container.right::after { left: 18px; }
+            .timeline-content { padding: 15px 20px; }
+            .accordion-header { padding: 1rem; flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .accordion-header .accordion-icon { align-self: flex-end; margin-top: -1.5rem; }
+            .work-toggle { padding: 1rem; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+            .details-button { align-self: flex-end; }
         }
 
         /* Tablet Responsiveness */
         @media screen and (min-width: 769px) and (max-width: 1024px) {
-            .timeline {
-                padding: 0 15px;
-            }
-            .timeline-container {
-                padding: 15px 30px;
-            }
-            .timeline-content {
-                padding: 18px 25px;
-            }
+            .timeline { padding: 0 15px; }
+            .timeline-container { padding: 15px 30px; }
+            .timeline-content { padding: 18px 25px; }
         }
 
         /* Small Mobile Responsiveness */
         @media screen and (max-width: 480px) {
-            .timeline {
-                padding: 0 5px;
-            }
-            .timeline::after {
-                left: 25px;
-            }
-            .timeline-container {
-                padding-left: 55px;
-                padding-right: 10px;
-            }
-            .timeline-container.left::after, .timeline-container.right::after {
-                left: 12px;
-                width: 20px;
-                height: 20px;
-                right: -10px;
-            }
-            .timeline-content {
-                padding: 12px 15px;
-            }
-            .accordion-content-inner {
-                padding: 1rem;
-            }
-            .work-toggle {
-                padding: 0.75rem;
-            }
-            .work-description .px-6 {
-                padding-left: 0.75rem;
-                padding-right: 0.75rem;
-            }
+            .timeline { padding: 0 5px; }
+            .timeline::after { left: 25px; }
+            .timeline-container { padding-left: 55px; padding-right: 10px; }
+            .timeline-container.left::after, .timeline-container.right::after { left: 12px; width: 20px; height: 20px; right: -10px; }
+            .timeline-content { padding: 12px 15px; }
+            .accordion-content-inner { padding: 1rem; }
+            .work-toggle { padding: 0.75rem; }
+            .work-description .px-6 { padding-left: 0.75rem; padding-right: 0.75rem; }
         }
 
         /* Hero section responsive adjustments */
-        @media screen and (max-width: 768px) {
-            .hero-image {
-                width: 280px;
-                height: 280px;
-                margin: 0 auto;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-image {
-                width: 240px;
-                height: 240px;
-            }
-        }
+        @media screen and (max-width: 768px) { .hero-image { width: 280px; height: 280px; margin: 0 auto; } }
+        @media screen and (max-width: 480px) { .hero-image { width: 240px; height: 240px; } }
 
         /* Modal responsive improvements */
-        @media screen and (max-width: 768px) {
-            .modal-content {
-                margin: 1rem;
-                max-height: calc(100vh - 2rem);
-                padding: 1.5rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .modal-content {
-                margin: 0.5rem;
-                max-height: calc(100vh - 1rem);
-                padding: 1rem;
-            }
-        }
+        @media screen and (max-width: 768px) { .modal-content { margin: 1rem; max-height: calc(100vh - 2rem); padding: 1.5rem; } }
+        @media screen and (max-width: 480px) { .modal-content { margin: 0.5rem; max-height: calc(100vh - 1rem); padding: 1rem; } }
 
         /* Creative shape for hero image */
         .creative-shape {
@@ -340,20 +257,49 @@
             animation: morph 8s ease-in-out infinite;
             transition: border-radius 1s ease-in-out;
         }
-
         @keyframes morph {
-            0% {
-                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            }
-            50% {
-                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-            }
-            100% {
-                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            }
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
-        .timeline-container::after {
-            border: 4px solid #4338ca; /* indigo-700 */
+
+        /* Animated Gradient Text */
+        .animated-gradient-text {
+            background: linear-gradient(90deg, #4338ca, #1d4ed8, #0369a1, #4338ca);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-flow 8s ease-in-out infinite;
+        }
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Project Card Glow Effect */
+        .project-card:hover {
+            box-shadow: 0 0 25px rgba(67, 56, 202, 0.3);
+        }
+
+        /* Scroll Fade-in Animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Creative enhancement for external link icon */
+        .external-link-icon {
+            display: inline-block; /* Required for transform */
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        a:hover .external-link-icon {
+            transform: translate(3px, -3px);
         }
     </style>
 </head>
@@ -367,7 +313,8 @@
                     <img src="https://raw.githubusercontent.com/arovinalnayem7-alt/Portfolio/main/Profile.jpg" alt="Profile Picture" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover shadow-sm"/>
                     <div>
                         <h1 class="text-base sm:text-lg font-semibold">Md. Arovin Al Nayem</h1>
-                        <p class="text-xs text-gray-500">Petroleum & Mining Engineer • M.Sc. (ongoing)</p>
+                        <p class="text-gray-500" style="font-size: 0.65rem; line-height: 0.9rem;">B.Sc. in Petroleum & Mining Engineering</p>
+                        <p class="text-gray-500" style="font-size: 0.65rem; line-height: 0.9rem;">M.Sc. in Chemical Engineering & Polymer Science (Ongoing)</p>
                     </div>
                 </a>
                 <button id="mobile-menu-button" class="md:hidden p-2 rounded-md border" aria-label="Open navigation menu">
@@ -380,7 +327,8 @@
                     <img src="https://raw.githubusercontent.com/arovinalnayem7-alt/Portfolio/main/Profile.jpg" alt="Profile Picture" class="w-11 h-11 rounded-full object-cover shadow-sm"/>
                     <div>
                         <h1 class="text-lg font-semibold">Md. Arovin Al Nayem</h1>
-                        <p class="text-xs text-gray-500">Petroleum & Mining Engineer • M.Sc. (ongoing)</p>
+                        <p class="text-gray-500" style="font-size: 0.65rem; line-height: 0.9rem;">B.Sc. in Petroleum & Mining Engineering</p>
+                        <p class="text-gray-500" style="font-size: 0.65rem; line-height: 0.9rem;">M.Sc. in Chemical Engineering & Polymer Science (Ongoing)</p>
                     </div>
                 </a>
                 <a href="https://raw.githubusercontent.com/arovinalnayem7-alt/Portfolio/b2b928c5c56749fe3e68ce700a073b859ba03e5a/Arovin_CV.pdf" download class="px-4 py-2 bg-indigo-700 text-white rounded-md text-sm hover:bg-indigo-800 transition-colors shadow-sm hover:shadow-md">Resume</a>
@@ -414,7 +362,7 @@
         <section id="home" class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
                 <p class="text-sm text-indigo-700 font-medium">Hello — I'm</p>
-                <h2 class="mt-2 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Md. Arovin Al Nayem</h2>
+                <h2 class="mt-2 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight" style="color: #0B0B45;">Md. Arovin Al Nayem</h2>
                 <div class="mt-4 text-gray-700 h-12 sm:h-14">
                     <span id="typing-text" class="text-base sm:text-lg"></span><span class="typing-cursor"></span>
                 </div>
@@ -439,7 +387,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="mt-12 sm:mt-16 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-md">
+        <section id="about" class="mt-12 sm:mt-16 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-md fade-in-section">
             <h3 class="text-xl sm:text-2xl font-semibold">About Me</h3>
             <p class="mt-4 text-sm sm:text-base text-gray-700 text-justify leading-relaxed">I'm Md. Arovin Al Nayem, a motivated and detail-oriented engineer with a B.Sc. in Petroleum & Mining Engineering and currently pursuing an M.Sc. in Chemical Engineering & Polymer Science at SUST. My academic journey, combined with hands-on industrial training and research experience, has built my expertise in process optimization, industrial safety, and data analysis. I hold professional certifications in Project Management, OSHAcademy Safety Programs, and ISO 9001:2015 Quality Management, which have strengthened my skills in project execution, risk assessment, and workplace safety implementation. Beyond academics, I have served in leadership roles at KIN, a voluntary organization at SUST, where I developed strong community engagement, coordination, and problem-solving abilities. I am passionate about using my technical knowledge and analytical skills to solve real-world problems, contribute to sustainable solutions, and improve organizational efficiency — aiming to streamline operations, enhance workplace safety, and deliver impactful projects that create measurable value.</p>
 
@@ -456,7 +404,7 @@
         </section>
 
         <!-- WORK EXPERIENCE -->
-        <section id="experience" class="mt-12 sm:mt-16">
+        <section id="experience" class="mt-12 sm:mt-16 fade-in-section">
             <div class="text-center">
                 <h3 class="text-xl sm:text-2xl font-semibold">Work Experience</h3>
                 <p class="text-gray-500 mt-2 text-sm sm:text-base">My professional involvement</p>
@@ -502,7 +450,7 @@
         </section>
         
         <!-- SKILLS -->
-        <section id="skills" class="mt-12 sm:mt-16">
+        <section id="skills" class="mt-12 sm:mt-16 fade-in-section">
             <h3 class="text-xl sm:text-2xl font-semibold">Skills</h3>
             <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
                 
@@ -540,14 +488,14 @@
         </section>
 
         <!-- PROJECTS -->
-        <section id="projects" class="mt-12 sm:mt-16">
+        <section id="projects" class="mt-12 sm:mt-16 fade-in-section">
             <div class="flex items-center justify-between">
                 <h3 class="text-xl sm:text-2xl font-semibold">Thesis & Research</h3>
                 <a href="#" class="text-xs sm:text-sm text-indigo-700 hover:underline">View all</a>
             </div>
 
             <div class="mt-6 sm:mt-8 grid md:grid-cols-2 gap-6 sm:gap-8">
-                <article class="p-4 bg-white rounded-lg border shadow-sm hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300 group">
+                <article class="p-4 bg-white rounded-lg border shadow-sm hover:-translate-y-1 transform transition-all duration-300 group project-card">
                     <!-- Project Image Gallery -->
                     <div class="project-gallery">
                         <!-- Main Image Display -->
@@ -574,7 +522,7 @@
                         <a href="https://doi.org/10.1016/j.jhazmat.2025.137744" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm text-indigo-700 hover:underline">Read Publication</a>
                     </div>
                 </article>
-                <article class="p-4 bg-white rounded-lg border shadow-sm hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300 group">
+                <article class="p-4 bg-white rounded-lg border shadow-sm hover:-translate-y-1 transform transition-all duration-300 group project-card">
                     <!-- Project Image Gallery -->
                     <div class="project-gallery">
                         <!-- Main Image Display -->
@@ -605,7 +553,7 @@
         </section>
         
         <!-- LEADERSHIP EXPERIENCE -->
-        <section id="leadership" class="mt-12 sm:mt-16">
+        <section id="leadership" class="mt-12 sm:mt-16 fade-in-section">
             <div class="text-center">
                 <h3 class="text-xl sm:text-2xl font-semibold">Leadership Experience</h3>
                 <p class="text-gray-500 mt-2 text-sm sm:text-base">Leading with purpose and passion</p>
@@ -617,7 +565,7 @@
                     </div>
                     <div>
                         <h4 class="text-base sm:text-lg font-semibold">Joint Secretary</h4>
-                        <p class="text-indigo-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST</a> | Oct 7, 2021 – Feb 7, 2023</p>
+                        <p class="text-indigo-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST <i class="fas fa-external-link-alt text-xs ml-1 external-link-icon"></i></a> | Oct 7, 2021 – Feb 7, 2023</p>
                         <p class="mt-3 text-gray-700 text-sm sm:text-base leading-relaxed">
                            As a Joint Secretary, my main duty is to act as a liaison between the General Secretary and the Organizing Secretary. I am responsible for gathering updates from all secretaries, assisting them till solving their problems.
                         </p>
@@ -629,7 +577,7 @@
                     </div>
                     <div>
                         <h4 class="text-base sm:text-lg font-semibold">Assistant Blood Secretary</h4>
-                        <p class="text-indigo-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST</a> | May 21, 2020 – Sep 10, 2021</p>
+                        <p class="text-indigo-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST <i class="fas fa-external-link-alt text-xs ml-1 external-link-icon"></i></a> | May 21, 2020 – Sep 10, 2021</p>
                         <p class="mt-3 text-gray-700 text-sm sm:text-base leading-relaxed">
                            As the Assistant Blood Secretary, my responsibilities include persuading individuals to donate blood, handling all phone inquiries, and assisting donors in reaching the hospital or patient. I act as the second-in-command to the Blood Secretary.
                         </p>
@@ -641,7 +589,7 @@
                     </div>
                     <div>
                         <h4 class="text-base sm:text-lg font-semibold">Education Development Secretary</h4>
-                        <p class="text-sky-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST</a> | Feb 14, 2019 – Jan 10, 2020</p>
+                        <p class="text-sky-700 font-medium mt-1 text-sm sm:text-base"><a href="https://www.facebook.com/KINSUST" target="_blank" rel="noopener noreferrer" class="hover:underline">KIN, A Voluntary Organization of SUST <i class="fas fa-external-link-alt text-xs ml-1 external-link-icon"></i></a> | Feb 14, 2019 – Jan 10, 2020</p>
                         <p class="mt-3 text-gray-700 text-sm sm:text-base leading-relaxed">
                            As the Education Development Secretary, my main duty was to develop the education system of KIN. I was responsible for providing daily updates on student reports and conveying them to the Education Secretary.
                         </p>
@@ -651,7 +599,7 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="mt-12 sm:mt-16 py-12 sm:py-20">
+        <section id="contact" class="mt-12 sm:mt-16 py-12 sm:py-20 fade-in-section">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
                 <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">Get in Touch</h3>
                 <p class="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -835,16 +783,10 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
+                mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
             }
             document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
+                link.addEventListener('click', () => { if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } });
             });
             
             // Year for footer
@@ -854,11 +796,8 @@
             const topBar = document.getElementById('desktop-top-bar');
             if (topBar) {
                 window.addEventListener('scroll', () => {
-                    if (window.scrollY > 30) { // Hides after scrolling down 30px
-                        topBar.classList.add('top-bar-hidden');
-                    } else { // Shows when back at the top
-                        topBar.classList.remove('top-bar-hidden');
-                    }
+                    if (window.scrollY > 30) { topBar.classList.add('top-bar-hidden'); } 
+                    else { topBar.classList.remove('top-bar-hidden'); }
                 });
             }
 
@@ -866,31 +805,16 @@
             const typingText = document.getElementById('typing-text');
             if (typingText) {
                 const phrases = [ "Process Optimization", "Industrial Safety", "Data-Driven Engineering" ];
-                let phraseIndex = 0;
-                let letterIndex = 0;
-                let currentPhrase = "";
-                let isDeleting = false;
-
+                let phraseIndex = 0, letterIndex = 0, currentPhrase = "", isDeleting = false;
                 function type() {
                     const fullPhrase = phrases[phraseIndex];
-                    if (isDeleting) {
-                        currentPhrase = fullPhrase.substring(0, letterIndex - 1);
-                        letterIndex--;
-                    } else {
-                        currentPhrase = fullPhrase.substring(0, letterIndex + 1);
-                        letterIndex++;
-                    }
+                    if (isDeleting) { currentPhrase = fullPhrase.substring(0, letterIndex - 1); letterIndex--; } 
+                    else { currentPhrase = fullPhrase.substring(0, letterIndex + 1); letterIndex++; }
                     typingText.textContent = currentPhrase;
                     let typeSpeed = 150;
                     if (isDeleting) typeSpeed /= 2;
-                    if (!isDeleting && letterIndex === fullPhrase.length) {
-                        typeSpeed = 2000;
-                        isDeleting = true;
-                    } else if (isDeleting && letterIndex === 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                        typeSpeed = 500;
-                    }
+                    if (!isDeleting && letterIndex === fullPhrase.length) { typeSpeed = 2000; isDeleting = true; } 
+                    else if (isDeleting && letterIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500; }
                     setTimeout(type, typeSpeed);
                 }
                 type();
@@ -900,35 +824,40 @@
             const skillsSection = document.getElementById('skills');
             const skillBars = document.querySelectorAll('.skill-bar-inner');
             if(skillsSection && skillBars.length > 0) {
-                const observer = new IntersectionObserver((entries) => {
+                const skillObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            skillBars.forEach(bar => {
-                                bar.style.width = bar.dataset.level;
-                            });
-                            observer.unobserve(skillsSection);
+                            skillBars.forEach(bar => { bar.style.width = bar.dataset.level; });
+                            skillObserver.unobserve(skillsSection);
                         }
                     });
                 }, { threshold: 0.3 });
-                observer.observe(skillsSection);
+                skillObserver.observe(skillsSection);
+            }
+
+            // Scroll Fade-in Animation for Sections
+            const sections = document.querySelectorAll('.fade-in-section');
+            if(sections.length > 0) {
+                const sectionObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => { sectionObserver.observe(section); });
             }
             
             // Generic Modal Logic
             function setupModal(modalId, openBtnId, closeBtnId) {
-                const modal = document.getElementById(modalId);
-                const openBtn = document.getElementById(openBtnId);
-                const closeBtn = document.getElementById(closeBtnId);
+                const modal = document.getElementById(modalId), openBtn = document.getElementById(openBtnId), closeBtn = document.getElementById(closeBtnId);
                 if(!modal || !openBtn || !closeBtn) return;
-                
                 const modalContent = modal.querySelector('.modal-content');
-
                 const open = () => {
                     document.body.classList.add('modal-open');
                     modal.classList.remove('hidden');
-                    setTimeout(() => {
-                        modal.classList.remove('opacity-0');
-                        modalContent.classList.remove('opacity-0', 'scale-95');
-                    }, 10);
+                    setTimeout(() => { modal.classList.remove('opacity-0'); modalContent.classList.remove('opacity-0', 'scale-95'); }, 10);
                 };
                 const close = () => {
                     document.body.classList.remove('modal-open');
@@ -938,38 +867,27 @@
                 };
                 openBtn.addEventListener('click', open);
                 closeBtn.addEventListener('click', close);
-                modal.addEventListener('click', e => {
-                    if (e.target === modal) close();
-                });
+                modal.addEventListener('click', e => { if (e.target === modal) close(); });
             }
-
             setupModal('education-modal', 'education-modal-btn', 'close-education-modal-btn');
             setupModal('certs-modal', 'certs-modal-btn', 'close-certs-modal-btn');
-
 
             // Accordion Logic (for Certs Modal)
             document.querySelectorAll('.accordion .accordion-header').forEach(header => {
                 header.addEventListener('click', () => {
-                    const currentItem = header.closest('.accordion-item');
-                    const wasActive = currentItem.classList.contains('active');
-
-                    // First, close all items in this accordion
+                    const currentItem = header.closest('.accordion-item'), wasActive = currentItem.classList.contains('active');
                     currentItem.closest('.accordion').querySelectorAll('.accordion-item').forEach(item => {
                         item.classList.remove('active');
                         item.querySelector('.accordion-content').style.maxHeight = null;
                         const icon = item.querySelector('.accordion-icon');
-                        icon.classList.remove('fa-minus');
-                        icon.classList.add('fa-plus');
+                        icon.classList.remove('fa-minus'); icon.classList.add('fa-plus');
                     });
-
-                    // If the clicked item wasn't already active, open it.
                     if (!wasActive) {
                         currentItem.classList.add('active');
                         const content = currentItem.querySelector('.accordion-content');
                         content.style.maxHeight = content.scrollHeight + 'px';
                         const icon = currentItem.querySelector('.accordion-icon');
-                        icon.classList.remove('fa-plus');
-                        icon.classList.add('fa-minus');
+                        icon.classList.remove('fa-plus'); icon.classList.add('fa-minus');
                     }
                 });
             });
@@ -977,95 +895,61 @@
             // FIXED: Work Experience Accordion Logic
             document.querySelectorAll('.work-toggle').forEach(button => {
                 button.addEventListener('click', () => {
-                    const allItems = document.querySelectorAll('.work-item');
-                    const currentItem = button.closest('.work-item');
-                    const wasActive = currentItem.classList.contains('active');
-                    
-                    // First, close all items
+                    const allItems = document.querySelectorAll('.work-item'), currentItem = button.closest('.work-item'), wasActive = currentItem.classList.contains('active');
                     allItems.forEach(item => {
                         item.classList.remove('active');
                         item.querySelector('.work-description').style.maxHeight = null;
                         const detailsBtn = item.querySelector('.details-button');
-                        detailsBtn.textContent = 'View Details';
-                        detailsBtn.classList.remove('active');
+                        detailsBtn.textContent = 'View Details'; detailsBtn.classList.remove('active');
                     });
-
-                    // If the clicked item wasn't already active, open it
                     if (!wasActive) {
                         currentItem.classList.add('active');
                         const description = currentItem.querySelector('.work-description');
                         description.style.maxHeight = description.scrollHeight + 'px';
                         const detailsBtn = currentItem.querySelector('.details-button');
-                        detailsBtn.textContent = 'Hide Details';
-                        detailsBtn.classList.add('active');
+                        detailsBtn.textContent = 'Hide Details'; detailsBtn.classList.add('active');
                     }
                 });
             });
 
             // Project Image Gallery Logic
             document.querySelectorAll('.project-gallery').forEach(gallery => {
-                const mainImage = gallery.querySelector('.main-project-image');
-                const thumbnails = gallery.querySelectorAll('.project-thumbnail');
-                const prevArrow = gallery.querySelector('.prev-arrow');
-                const nextArrow = gallery.querySelector('.next-arrow');
-
-                // Create an array of image URLs from the thumbnail data attributes
+                const mainImage = gallery.querySelector('.main-project-image'), thumbnails = gallery.querySelectorAll('.project-thumbnail'), prevArrow = gallery.querySelector('.prev-arrow'), nextArrow = gallery.querySelector('.next-arrow');
                 const images = Array.from(thumbnails).map(thumb => thumb.dataset.image);
                 let currentIndex = 0;
-
                 function updateImage() {
                     mainImage.style.opacity = '0';
-                    setTimeout(() => {
-                        mainImage.src = images[currentIndex];
-                        mainImage.style.opacity = '1';
-                    }, 300); // Match transition duration
+                    setTimeout(() => { mainImage.src = images[currentIndex]; mainImage.style.opacity = '1'; }, 300);
                 }
-                
                 if (prevArrow && nextArrow) {
-                    prevArrow.addEventListener('click', () => {
-                        currentIndex = (currentIndex - 1 + images.length) % images.length;
-                        updateImage();
-                    });
-
-                    nextArrow.addEventListener('click', () => {
-                        currentIndex = (currentIndex + 1) % images.length;
-                        updateImage();
-                    });
+                    prevArrow.addEventListener('click', () => { currentIndex = (currentIndex - 1 + images.length) % images.length; updateImage(); });
+                    nextArrow.addEventListener('click', () => { currentIndex = (currentIndex + 1) % images.length; updateImage(); });
                 }
             });
 
             // EmailJS Form Submission
-            const EMAILJS_SERVICE_ID = 'service_tjp6np9';
-            const EMAILJS_TEMPLATE_ID = 'template_2fxvhtl';
-            const EMAILJS_PUBLIC_KEY = 'VtEb8Ya_AWD42NvHs';
+            const EMAILJS_SERVICE_ID = 'service_tjp6np9', EMAILJS_TEMPLATE_ID = 'template_2fxvhtl', EMAILJS_PUBLIC_KEY = 'VtEb8Ya_AWD42NvHs';
             const contactForm = document.getElementById('contact-form');
             if(contactForm) {
-                const formStatus = document.getElementById('form-status');
-                const submitBtn = document.getElementById('submit-btn');
-                const submitBtnText = document.getElementById('submit-btn-text');
-                const submitSpinner = document.getElementById('submit-spinner');
+                const formStatus = document.getElementById('form-status'), submitBtn = document.getElementById('submit-btn'), submitBtnText = document.getElementById('submit-btn-text'), submitSpinner = document.getElementById('submit-spinner');
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
                     submitBtn.disabled = true;
-                    submitBtnText.classList.add('hidden');
-                    submitSpinner.classList.remove('hidden');
+                    submitBtnText.classList.add('hidden'); submitSpinner.classList.remove('hidden');
                     formStatus.textContent = '';
                     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm, EMAILJS_PUBLIC_KEY)
                         .then(() => {
                             formStatus.textContent = "Thank you! Your message has been sent successfully.";
-                            formStatus.classList.add('text-green-600');
-                            formStatus.classList.remove('text-red-600');
+                            formStatus.classList.add('text-green-600'); formStatus.classList.remove('text-red-600');
                             contactForm.reset();
                         }, (error) => {
                             console.error('EmailJS error:', error);
                             formStatus.textContent = `Oops! There was a problem: ${error.text || 'Please try again.'}`;
-                            formStatus.classList.add('text-red-600');
-                            formStatus.classList.remove('text-green-600');
+                            formStatus.classList.add('text-red-600'); formStatus.classList.remove('text-green-600');
                         })
                         .finally(() => {
                             submitBtn.disabled = false;
-                            submitBtnText.classList.remove('hidden');
-                            submitSpinner.classList.add('hidden');
+                            submitBtnText.classList.remove('hidden'); submitSpinner.classList.add('hidden');
                         });
                 });
             }
@@ -1073,13 +957,6 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
